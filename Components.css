@@ -1,0 +1,188 @@
+/* 🎨 Define Theme Colors */
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --success-color: #28a745;
+    --success-hover: #218838;
+    --error-color: #dc3545;
+    --background-light: #f8f9fa;
+    --border-color: #ccc;
+    --text-dark: #333;
+  }
+  
+  /* 🌟 Global Styles */
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: var(--background-light);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* 🔹 Main Component Wrapper */
+  .component-wrapper {
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  /* 📝 Text Areas & Inputs */
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  /* 🎛️ Buttons */
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  button:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* ⏳ Loading Animation */
+  button:disabled::after {
+    content: " ⏳";
+  }
+  
+  /* ❌ Error Message */
+  .error-message {
+    color: var(--error-color);
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  /* ✅ Success Messages */
+  .success-message {
+    color: var(--success-color);
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  /* 📝 Text Length Indicator */
+  .text-length-indicator {
+    font-size: 12px;
+    color: #555;
+    margin-top: -10px;
+  }
+  
+  /* 📄 Result Box */
+  .result-box {
+    background: var(--background-light);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .result-box h3 {
+    margin-bottom: 10px;
+    color: var(--text-dark);
+  }
+  
+  .result-box button {
+    background-color: var(--success-color);
+  }
+  
+  .result-box button:hover {
+    background-color: var(--success-hover);
+  }
+  
+  /* 🔊 Audio Player */
+  .audio-player {
+    margin-top: 15px;
+    padding: 10px;
+    background: var(--background-light);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  /* 🎛️ Custom Audio Controls */
+  .audio-controls button {
+    background-color: var(--primary-color);
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .audio-controls button:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  /* ⏳ Progress Bar */
+  .progress-bar {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .progress-bar progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+    appearance: none;
+  }
+  
+  .progress-bar progress::-webkit-progress-bar {
+    background: #ddd;
+    border-radius: 5px;
+  }
+  
+  .progress-bar progress::-webkit-progress-value {
+    background: var(--primary-color);
+    border-radius: 5px;
+  }
+  
+  /* 📱 Responsive Design */
+  @media (max-width: 768px) {
+    .component-wrapper {
+      width: 95%;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  
+    .audio-controls button {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  }
+  
